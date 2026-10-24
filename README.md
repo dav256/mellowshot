@@ -2,19 +2,13 @@
 
 photography by david — portraits, events, and church media.
 
-a minimal, image-led site for mellowshot_it. plain html, css, and javascript, hosted on github pages.
+a minimal, image-led site for mellowshot_it. plain html and css in a single file, hosted on github pages.
 
-## structure
+## what's here
 
-- `index.html` — home / selected work
-- `gallery/` — shoots by type: portraits · events · church
-- `about.html` — about + booking inquiry
-- `assets/` — photos (web-sized exports only)
+- `index.html` — the whole site: hero, selected work, services, about, booking
+- gallery tiles are placeholders — swap the gradient blocks for real photos as shoots are added
 
 ## run locally
 
 open `index.html` or `npx serve .`
-
-## status
-
-scaffold — add first gallery, then publish via github pages.
