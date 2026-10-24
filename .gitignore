@@ -1,0 +1,6 @@
+.DS_Store
+*.psd
+*.raw
+*.cr2
+*.nef
+node_modules/
