@@ -1,4 +1,6 @@
-<h1><img src="icon.svg" width="44" align="middle" alt="mellowshot camera icon"> Mellowshot</h1>
+<img src="icon.svg" width="72" alt="mellowshot camera icon">
+
+# Mellowshot
 
 [![site live](https://img.shields.io/badge/site-live-brightgreen?style=for-the-badge&logo=github)](https://dav256.github.io/mellowshot/) ![last commit](https://img.shields.io/github/last-commit/dav256/mellowshot?style=for-the-badge) ![GitHub stars](https://img.shields.io/github/stars/dav256/mellowshot?style=for-the-badge&logo=github) ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)
 
