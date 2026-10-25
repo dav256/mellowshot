@@ -1,11 +1,12 @@
 # mellowshot
 
-[![site live](https://img.shields.io/badge/site-live-brightgreen?style=for-the-badge&logo=github)](https://dav256.github.io/mellowshot/)
-![last commit](https://img.shields.io/github/last-commit/dav256/mellowshot?style=for-the-badge)
+[![site live](https://img.shields.io/badge/site-live-brightgreen?style=for-the-badge&logo=github)](https://dav256.github.io/mellowshot/) ![last commit](https://img.shields.io/github/last-commit/dav256/mellowshot?style=for-the-badge) ![GitHub stars](https://img.shields.io/github/stars/dav256/mellowshot?style=for-the-badge&logo=github) ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)
 
-> ### Live site — [dav256.github.io/mellowshot](https://dav256.github.io/mellowshot/)
+> **Live site:** View the photography site at [dav256.github.io/mellowshot](https://dav256.github.io/mellowshot/).
 
-mellowshot is a photography site for mellowshot_it — portraits, events, and church media — in a minimal, image-led design built from plain HTML and CSS in a single file, hosted on GitHub Pages.
+**mellowshot is a photography site for mellowshot_it, covering portraits, events, and church media.**
+
+The design is minimal and image-led. The whole site lives in a single HTML file, which keeps it fast to load and straightforward to update as new shoots are added.
 
 ## what's here
 
