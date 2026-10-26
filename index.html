@@ -5,187 +5,154 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mellowshot — Photography by David</title>
 <meta name="description" content="Mellowshot — photography by David. Portraits, events, and church media.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230d0d0f'/%3E%3Ccircle cx='50' cy='54' r='24' fill='none' stroke='%23c9a35f' stroke-width='7'/%3E%3Ccircle cx='50' cy='54' r='8' fill='%23c9a35f'/%3E%3Crect x='36' y='18' width='28' height='10' rx='5' fill='%23c9a35f'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23111111'/%3E%3Ccircle cx='50' cy='54' r='24' fill='none' stroke='%23c9a35f' stroke-width='7'/%3E%3Ccircle cx='50' cy='54' r='8' fill='%23c9a35f'/%3E%3Crect x='36' y='18' width='28' height='10' rx='5' fill='%23c9a35f'/%3E%3C/svg%3E">
 <style>
-  :root{
-    --bg:#0d0d0f; --panel:#151517; --ink:#f2f0eb; --muted:#9b978e; --line:#26262a;
-    --accent:#c9a35f; --radius:18px;
-  }
+  :root{ --bg:#111112; --ink:#ece9e2; --muted:#a19c92; --line:#262624; --accent:#c9a35f; }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;animation:pageIn .9s ease both}
+  body{background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;animation:pageIn .8s ease both}
   @keyframes pageIn{from{opacity:0}to{opacity:1}}
   a{color:inherit}
   .serif{font-family:Georgia,"Times New Roman",serif}
   img{display:block;max-width:100%}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 1.6rem}
 
-  /* nav */
-  nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;
-      padding:1.1rem 2rem;background:linear-gradient(to bottom,rgba(13,13,15,.85),transparent);backdrop-filter:blur(2px)}
-  .logo{letter-spacing:.35em;font-size:.95rem;text-decoration:none}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 0}
+  .logo{text-decoration:none;font-size:1rem;letter-spacing:.28em}
   .logo b{color:var(--accent);font-weight:600}
-  nav .links a{margin-left:1.75rem;text-decoration:none;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);transition:opacity .3s ease,color .3s ease}
+  nav .links a{margin-left:1.6rem;text-decoration:none;font-size:.8rem;color:var(--muted);transition:opacity .3s ease,color .3s ease}
   nav .links a:hover{color:var(--ink)}
   nav .links:hover a{opacity:.35}
   nav .links:hover a:hover{opacity:1}
-  @media(max-width:640px){nav .links a{margin-left:1rem}}
 
-  /* hero */
-  header{position:relative;min-height:94vh;display:flex;flex-direction:column;justify-content:flex-end;padding:7rem 2rem 3.5rem;overflow:hidden}
-  .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;
-    -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
-  .hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,15,.45) 0%,rgba(13,13,15,.05) 40%,rgba(13,13,15,.82) 100%)}
-  header .inner{position:relative;max-width:1180px;margin:0 auto;width:100%}
-  header .kicker{color:var(--accent);letter-spacing:.4em;text-transform:uppercase;font-size:.72rem;margin-bottom:1.2rem}
-  header h1{font-weight:400;font-size:clamp(3.2rem,11vw,8.5rem);line-height:.95;letter-spacing:-.01em}
+  header{padding:4.5rem 0 2.5rem}
+  header .who{color:var(--muted);font-size:.92rem;margin-bottom:1.6rem}
+  header h1{font-weight:400;font-size:clamp(2.9rem,8vw,5.4rem);line-height:1.02;letter-spacing:-.01em}
   header h1 em{font-style:italic;color:var(--accent)}
-  header p{margin-top:1.4rem;max-width:520px;color:#d8d4cb;font-size:1.05rem;line-height:1.75}
-  header .cta{margin-top:2.2rem;display:flex;gap:1rem;flex-wrap:wrap}
-  .btn{padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);background:rgba(13,13,15,.35);backdrop-filter:blur(3px)}
-  .btn.solid{background:var(--ink);color:#111;border-color:var(--ink)}
-  .btn.solid:hover{background:var(--accent);border-color:var(--accent)}
-  .btn.ghost{color:var(--ink)}
-  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+  header p{margin-top:1.5rem;max-width:480px;color:var(--muted);font-size:1.02rem;line-height:1.8}
+  header .cta{margin-top:2rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+  .pill{display:inline-block;background:var(--ink);color:#111;text-decoration:none;padding:.8rem 1.6rem;border-radius:999px;font-size:.85rem;transition:background .3s ease}
+  .pill:hover{background:var(--accent)}
+  .tlink{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;font-size:.95rem}
+  .wide-photo{margin:2.5rem 0 0;border-radius:14px;overflow:hidden}
+  .wide-photo img{width:100%;height:min(58vh,520px);object-fit:cover}
 
-  /* sections */
-  section{max-width:1180px;margin:0 auto;padding:5.5rem 2rem 1rem}
-  .head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:2.2rem}
-  .head h2{font-weight:400;font-size:clamp(1.8rem,4vw,2.6rem)}
-  .head span{color:var(--muted);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase}
+  section{padding:4.5rem 0 0}
+  .head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:1.1rem;margin-bottom:2.2rem}
+  .head h2{font-weight:400;font-size:1.7rem}
+  .head span{color:var(--muted);font-size:.85rem}
 
-  /* gallery — hover-reveal cards */
-  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1.1rem}
-  .tile{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--panel);min-height:300px;display:block;text-decoration:none}
-  .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-  .tile:hover img{transform:scale(1.045)}
-  .tile .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.4rem;
-    background:linear-gradient(185deg,rgba(10,10,12,0) 45%,rgba(10,10,12,.78));opacity:0;transition:opacity .4s ease}
-  .tile:hover .ov,.tile:focus-visible .ov{opacity:1}
-  .tile .ov .kick{color:var(--accent);letter-spacing:.3em;text-transform:uppercase;font-size:.65rem;margin-bottom:.4rem;transform:translateY(8px);transition:transform .4s ease}
-  .tile .ov h3{font-weight:400;font-size:1.45rem;transform:translateY(8px);transition:transform .4s ease .03s}
-  .tile .ov .tags{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:.7rem;transform:translateY(8px);transition:transform .4s ease .06s}
-  .tile .ov .tags span{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.5);color:#fff;padding:.22rem .6rem;border-radius:999px}
-  .tile:hover .ov .kick,.tile:hover .ov h3,.tile:hover .ov .tags{transform:none}
-  @media(hover:none){.tile .ov{opacity:1}.tile .ov .kick,.tile .ov h3,.tile .ov .tags{transform:none}}
-  .w7{grid-column:span 7}.w5{grid-column:span 5}.w4{grid-column:span 4}
-  .w7,.w5{min-height:360px}
-  @media(max-width:800px){.w7,.w5,.w4{grid-column:span 12}}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:2.6rem 1.6rem}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+  figure.shot a{display:block;border-radius:14px;overflow:hidden}
+  figure.shot img{width:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+  figure.shot a:hover img{transform:scale(1.03)}
+  .r45 img{aspect-ratio:4/5}.r32 img{aspect-ratio:3/2}.r11 img{aspect-ratio:1/1}
+  figcaption{display:flex;justify-content:space-between;gap:1rem;padding-top:.8rem;font-size:.92rem}
+  figcaption .cat{color:var(--muted);font-size:.85rem}
 
-  /* services */
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-  @media(max-width:800px){.cards{grid-template-columns:1fr}}
-  .card{border:1px solid var(--line);border-radius:var(--radius);padding:2rem 1.6rem;background:linear-gradient(180deg,#141416,#101012)}
-  .card h3{font-weight:400;font-size:1.3rem;margin-bottom:.6rem}
-  .card p{color:var(--muted);line-height:1.7;font-size:.95rem}
-  .card .n{color:var(--accent);font-size:.75rem;letter-spacing:.3em}
-  .icon{width:54px;height:54px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;margin-bottom:1.1rem;background:radial-gradient(circle at 50% 0%,rgba(201,163,95,.16),transparent 70%)}
-  .icon svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-  .btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px;margin-right:.5rem}
+  .rows{border-top:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:220px 1fr;gap:1.2rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+  @media(max-width:720px){.row{grid-template-columns:1fr;gap:.4rem}}
+  .row h3{font-weight:400;font-size:1.15rem}
+  .row p{color:var(--muted);line-height:1.75;font-size:.97rem;max-width:56ch}
 
-  /* about + book */
-  .about{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
-  @media(max-width:800px){.about{grid-template-columns:1fr}}
-  .about p{color:var(--muted);line-height:1.85;font-size:1.02rem}
-  .about p+p{margin-top:1rem}
-  .book{border:1px solid var(--line);border-radius:var(--radius);padding:2.2rem;text-align:center;
-        background:radial-gradient(600px 260px at 50% -20%,rgba(201,163,95,.18),transparent 65%),#121214}
-  .book h2{font-weight:400;font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:.8rem}
-  .book p{color:var(--muted);margin-bottom:1.8rem;line-height:1.7}
+  .about-text{max-width:620px}
+  .about-text p{color:var(--muted);line-height:1.9;font-size:1.02rem}
+  .about-text p+p{margin-top:1.1rem}
+  .about-text p b{color:var(--ink);font-weight:600}
 
-  footer{position:relative;margin-top:6rem;border-top:1px solid var(--line);padding:2.4rem 2.2rem;text-align:center;color:var(--muted);font-size:.85rem;letter-spacing:.12em;overflow:hidden}
-  footer::before{content:"";position:absolute;inset:0;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.5"/></svg>');opacity:.05;pointer-events:none}
-  footer p{position:relative;line-height:2}
-  footer a{color:var(--accent);text-decoration:none}
-  footer .dim{color:#6d6a63}
-  footer .bright{color:var(--ink)}
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}body{animation:none}.tile img{transition:none}}
+  .book{padding:5rem 0 1rem;text-align:center}
+  .book h2{font-weight:400;font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:1rem}
+  .book p{color:var(--muted);line-height:1.8;margin-bottom:2rem}
+
+  footer{border-top:1px solid var(--line);margin-top:5rem;padding:2rem 0 2.6rem;color:var(--muted);font-size:.88rem;line-height:2}
+  footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:1px}
+  footer .small{font-size:.8rem;color:#75726b}
+
+  .reveal{opacity:0;transition:opacity .8s ease}
+  .reveal.in{opacity:1}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transition:none}html{scroll-behavior:auto}body{animation:none}figure.shot img{transition:none}}
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<nav>
-  <a class="logo" href="#top">mellow<b>shot</b></a>
-  <div class="links">
-    <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#book">Book</a>
-  </div>
-</nav>
+  <nav>
+    <a class="logo" href="#top">mellow<b>shot</b></a>
+    <div class="links">
+      <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#book">Book</a>
+    </div>
+  </nav>
 
-<header id="top">
-  <img class="hero-photo" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1600&auto=format&fit=crop" alt="Portrait in warm natural light">
-  <div class="hero-shade"></div>
-  <div class="inner">
-    <div class="kicker">Photography · mellowshot_it</div>
+  <header id="top">
+    <p class="who">Mellowshot — photography by David</p>
     <h1 class="serif">moments,<br><em>mellowed.</em></h1>
-    <p>Portraits, events, and church media — shot warm, honest, and unhurried. Photography by David.</p>
+    <p>I shoot portraits, events, and church services. Warm light, real people, nothing staged to death. If you have a day worth remembering, I'll help you keep it.</p>
     <div class="cta">
-      <a class="btn solid" href="#work">See the work</a>
-      <a class="btn ghost" href="#book">Book a shoot</a>
+      <a class="pill" href="#book">Book a shoot</a>
+      <a class="tlink" href="#work">See the work</a>
     </div>
-  </div>
-</header>
-
-<section id="work">
-  <div class="head"><h2 class="serif">Selected Work</h2><span>Portraits · Events · Church</span></div>
-  <div class="grid">
-    <a class="tile w7 reveal" href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener">
-      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1400&auto=format&fit=crop" alt="Editorial portrait of a woman">
-      <span class="ov"><span class="kick">Portraits</span><h3 class="serif">Faces &amp; Stories</h3><span class="tags"><span>Portraits</span><span>Editorial</span></span></span>
-    </a>
-    <a class="tile w5 reveal" href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener">
-      <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop" alt="Event crowd under warm lights">
-      <span class="ov"><span class="kick">Events</span><h3 class="serif">Nights That Mattered</h3><span class="tags"><span>Events</span><span>Live</span></span></span>
-    </a>
-    <a class="tile w4 reveal" href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener">
-      <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?q=80&w=1000&auto=format&fit=crop" alt="Inside a church during worship">
-      <span class="ov"><span class="kick">Church</span><h3 class="serif">Worship &amp; Community</h3><span class="tags"><span>Church Media</span></span></span>
-    </a>
-    <a class="tile w4 reveal" href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop" alt="A couple celebrating at their wedding">
-      <span class="ov"><span class="kick">Events</span><h3 class="serif">Celebrations</h3><span class="tags"><span>Events</span><span>Weddings</span></span></span>
-    </a>
-    <a class="tile w4 reveal" href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener">
-      <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop" alt="A film camera on a desk">
-      <span class="ov"><span class="kick">Editorial</span><h3 class="serif">Behind the Lens</h3><span class="tags"><span>Editorial</span><span>Process</span></span></span>
-    </a>
-  </div>
-</section>
-
-<section id="services">
-  <div class="head"><h2 class="serif">What I Shoot</h2><span>Services</span></div>
-  <div class="cards">
-    <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg></div><div class="n">01</div><h3 class="serif">Portraits</h3><p>Senior photos, headshots, and personal sessions — relaxed direction, natural light, true-to-you edits.</p></div>
-    <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div><div class="n">02</div><h3 class="serif">Events</h3><p>Parties, gatherings, and milestone nights, covered quietly so the moment stays the moment.</p></div>
-    <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2.5v4M10 4.5h4"/><path d="M5 21v-8l7-4.5L19 13v8"/><path d="M9.5 21v-4a2.5 2.5 0 0 1 5 0v4"/><path d="M2.5 21h19"/></svg></div><div class="n">03</div><h3 class="serif">Church Media</h3><p>Services, conferences, and community life — photography that helps people feel the room before they walk in.</p></div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="head"><h2 class="serif">About</h2><span>The Photographer</span></div>
-  <div class="about">
-    <div class="reveal">
-      <p>I'm David — a creative director, designer, and photographer. I'm passionate about helping people and organizations communicate through design and digital media, and through church media, photography, and creative projects, I focus on creating meaningful experiences that bring people together.</p>
-      <p>Mellowshot is where the photography lives: warm tones, real people, and the small moments in between the big ones. If that sounds like your day, I'd love to shoot it.</p>
+    <div class="wide-photo reveal">
+      <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop" alt="A crowd celebrating under warm lights">
     </div>
-    <div class="book reveal" id="book">
-      <h2 class="serif">Let's Shoot</h2>
-      <p>Booking portraits, events, and church media now.<br>Tell me about your day and we'll make it mellow.</p>
-      <a class="btn solid" href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg>DM @mellowshot_it</a>
+  </header>
+
+  <section id="work">
+    <div class="head"><h2 class="serif">Selected Work</h2><span>More on Instagram</span></div>
+    <div class="grid">
+      <figure class="shot reveal">
+        <a href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener"><img class="r45" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop" alt="Editorial portrait of a woman"></a>
+        <figcaption><span>Faces &amp; Stories</span><span class="cat">Portraits</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <a href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener"><img class="r45" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" alt="Portrait of a man in soft light"></a>
+        <figcaption><span>Golden Hour Sessions</span><span class="cat">Portraits</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <a href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener"><img class="r32" src="https://images.unsplash.com/photo-1438032005730-c779502df39b?q=80&w=1200&auto=format&fit=crop" alt="Inside a church during worship"></a>
+        <figcaption><span>Worship &amp; Community</span><span class="cat">Church Media</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <a href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener"><img class="r32" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="A couple celebrating at their wedding"></a>
+        <figcaption><span>Celebrations</span><span class="cat">Events</span></figcaption>
+      </figure>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p><span class="dim">Questions?</span> <span class="bright">DM @mellowshot_it and I'll take care of the rest.</span></p>
-  <p>mellowshot · Photography by David · <a href="https://guns.lol/davfxstudio">davfxstudio</a> · <a href="https://github.com/dav256">GitHub</a><br>
-  <span class="dim">Sample imagery shown while the full galleries are built out — the real work lives on Instagram.</span></p>
-</footer>
+  <section id="services">
+    <div class="head"><h2 class="serif">What I Shoot</h2><span>Services</span></div>
+    <div class="rows">
+      <div class="row reveal"><h3 class="serif">Portraits</h3><p>Senior photos, headshots, and personal sessions. Relaxed direction, natural light, edits that still look like you.</p></div>
+      <div class="row reveal"><h3 class="serif">Events</h3><p>Parties, gatherings, and milestone nights. I cover them quietly, so the moment stays the moment.</p></div>
+      <div class="row reveal"><h3 class="serif">Church Media</h3><p>Services, conferences, and community life — photos that help people feel the room before they ever walk in.</p></div>
+    </div>
+  </section>
 
+  <section id="about">
+    <div class="head"><h2 class="serif">About</h2><span>The Photographer</span></div>
+    <div class="about-text reveal">
+      <p>I'm <b>David</b> — a creative director, designer, and photographer. I'm passionate about helping people and organizations communicate through design and digital media, and I focus on creating meaningful experiences that bring people together.</p>
+      <p>Mellowshot is the photography side of that: warm tones, real people, and the small moments in between the big ones.</p>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <h2 class="serif">Let's shoot.</h2>
+    <p>Booking portraits, events, and church media now.<br>Tell me about your day and we'll make it mellow.</p>
+    <a class="pill" href="https://www.instagram.com/mellowshot_it" target="_blank" rel="noopener">DM @mellowshot_it</a>
+  </section>
+
+  <footer>
+    Mellowshot · Photography by David · <a href="https://guns.lol/davfxstudio">davfxstudio</a> · <a href="https://github.com/dav256">GitHub</a><br>
+    <span class="small">The photos above are samples while I build out the full galleries — my work lives on Instagram for now.</span>
+  </footer>
+
+</div>
 <script>
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), { threshold: .12 });
+  }), { threshold: .1 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
